@@ -1,0 +1,16 @@
+inputs = int(input())
+
+def findPassword(word):
+    for i in range(len(word)):
+        if word[i] != "0":
+            return i + 2
+
+for i in range(inputs):
+    academicNumber = str(input())
+    lenAcademicNumber =  len(academicNumber)
+    lenIsCorrect = lenAcademicNumber!= 20
+    hasRA = academicNumber[0:2] != "RA"
+    if lenIsCorrect or hasRA:
+        print("INVALID DATA")
+    else:
+        print(academicNumber[findPassword(academicNumber[2::])::])
