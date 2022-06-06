@@ -1,0 +1,12 @@
+inputRange = int(input())
+
+for i in range(inputRange):
+    rangeNumbers = str(input()).split(" ")
+    begin = int(rangeNumbers[0])
+    end = int(rangeNumbers[1])
+    string = ""
+    for i in range(begin, end+1):
+        string = string + str(i)
+    string = string + string[::-1]
+    print(string)
+        
